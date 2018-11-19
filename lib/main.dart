@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: '  ',
+      title: 'Web',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Web Browser'),
+      home: MyHomePage(title: 'Web'),
     );
   }
 }
@@ -61,6 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
               textAlign: TextAlign.center)
           );
       });
+      // TODO save bookmark here.
       new Timer(_timeout, _dismissAlert);
     }
 
@@ -89,7 +90,7 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: _saveBookmark,
         tooltip: 'Increment',
-        child: Icon(Icons.add),
+        child: Icon(Icons.favorite),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
