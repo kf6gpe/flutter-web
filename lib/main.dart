@@ -46,23 +46,32 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final _timeout = const Duration(seconds: 1);
+  final _timeout = const Duration(seconds: 10);
+  Timer _dismissTimer;
 
   void _dismissAlert() {
-    Navigator.of(context, rootNavigator: true).pop();
+    if (_dismissTimer != null) {
+      Navigator.of(context, rootNavigator: true).pop();
+      _dismissTimer = null;
+    }
   }
 
   void _saveBookmark() {
       showDialog(context: context,
         builder: (BuildContext context) {
+          _dismissTimer = Timer(_timeout, _dismissAlert);
           return  AlertDialog(
             content: new Text( 
               'Bookmark saved!',
               textAlign: TextAlign.center)
           );
+      }).then((_) {
+        _dismissTimer?.cancel();
+        _dismissTimer = null; 
       });
+
       // TODO save bookmark here.
-      new Timer(_timeout, _dismissAlert);
+
     }
 
   @override
