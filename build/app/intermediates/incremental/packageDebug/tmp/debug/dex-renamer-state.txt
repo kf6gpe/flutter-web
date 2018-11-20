@@ -1,0 +1,4 @@
+#Tue Nov 20 12:24:15 PST 2018
+base.0=/usr/local/google/home/rischpater/Projects/Flutter/mine/flutter-web/build/app/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex
