@@ -46,7 +46,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final _timeout = const Duration(seconds: 10);
+  final _timeout = const Duration(seconds: 1);
   Timer _dismissTimer;
 
   void _dismissAlert() {
