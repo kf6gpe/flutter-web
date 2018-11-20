@@ -1,6 +1,8 @@
 # myweb
 
-A new Flutter project.
+Simple application demonstrating native platform web view with Flutter.
+Includes an action button with a mocked non-functional favorites"
+action and pop-up dialog.
 
 ## Getting Started
 
